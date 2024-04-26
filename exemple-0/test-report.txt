@@ -1,6 +1,6 @@
 ============================= test session starts ==============================
-platform linux -- Python 3.9.13, pytest-8.1.1, pluggy-1.4.0
-rootdir: /home/matcha/dev/iut-eternal-test-exercises/exemple-0
+platform linux -- Python 3.8.10, pytest-8.1.1, pluggy-1.4.0
+rootdir: /iutv/Mes_Montages/12306672/eternal-test-exercises/exemple-0
 collected 1 item
 
 test_trivial.py .                                                        [100%]

@@ -1,0 +1,71 @@
+============================= test session starts ==============================
+platform linux -- Python 3.8.10, pytest-8.1.1, pluggy-1.4.0
+rootdir: /iutv/Mes_Montages/12306672/eternal-test-exercises/exercice-2
+collected 1 item
+
+test_tortue.py F                                                         [100%]
+
+=================================== FAILURES ===================================
+_______________________________ test_move_tortue _______________________________
+
+    def test_move_tortue():
+      """On teste une classe Tortue(origine_x, origine_y) pourvue des méthodes walk(int), et look_<direction>()
+      ainsi que teleport(x, y).
+    
+      La tortue est vue de haut comme dans un jeu vidéo et se déplace dans un repère orthonormé
+      imaginaire tel que x positif est à droite, y positif est en bas.
+    
+      (0,0)              (20,0)
+      .                    .
+    
+    
+    
+      (0, 5)             (20, 5)
+      .                    .
+    
+      Implémenter la classe Tortue
+    
+      Quand on lui dit de regarder dans une direction, elle s'oriente de sorte
+      que quand elle va marcher elle va aller dans cette direction.
+    
+      Ainsi, si elle regarde à droite, en marchant sa coordonnée x va augmenter.
+      Inversement si elle regarde à gauche elle va diminuer.
+      Si elle regarde en bas, y va augmenter et inversement en regardant en haut.
+    
+      La tortue est géniale et peut donc se téléporter avec la méthode teleport.
+      """
+      class Tortue():
+        def _init_(self):
+          self.x = 0
+          self.y = 0
+          self.direction = 'up'
+    
+        def look_right(self):
+          self.direction = 'right'
+    
+        def look_left(self):
+          self.direction = 'left'
+    
+        def look_up(self):
+          self.direction = 'up'
+    
+        def look_down(self):
+          self.direction = 'down'
+    
+        def walk(self, pas):
+          if self.direction == 'right':
+            self.x += pas
+          elif self.direction == 'left':
+            self.x -= pas
+          elif self.direction == 'down':
+            self.y += pas
+          else:
+            self.y -= pas
+    
+>     t = Tortue(x=0, y=0)
+E     TypeError: Tortue() takes no arguments
+
+test_tortue.py:55: TypeError
+=========================== short test summary info ============================
+FAILED test_tortue.py::test_move_tortue - TypeError: Tortue() takes no arguments
+============================== 1 failed in 0.04s ===============================
